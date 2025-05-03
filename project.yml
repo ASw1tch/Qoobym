@@ -1,0 +1,38 @@
+APP_NAME: &APP_NAME Qoobym
+DEVELOPMENT_TEAM: &DEVELOPMENT_TEAM PFP266U7G7
+BUNDLE_ID_PREFIX: &BUNDLE_ID_PREFIX aswitch.me
+
+settings:
+  base:
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: "1"
+    DEVELOPMENT_TEAM: *DEVELOPMENT_TEAM
+    IDEPreferLogStreaming: YES
+
+name: *APP_NAME
+
+options:
+  bundleIdPrefix: *BUNDLE_ID_PREFIX
+  developmentLanguage: en
+  deploymentTarget:
+    iOS: 16.0
+
+targets:
+  *APP_NAME:
+    type: application
+    platform: iOS
+    sources:
+      - path: Qoobym
+    info:
+      path: Qoobym/Info.plist
+      properties:
+        CFBundleDisplayName: "Qoobym"
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchStoryboardName: LaunchScreen
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: true
+      
