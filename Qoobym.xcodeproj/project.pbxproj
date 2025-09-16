@@ -3,22 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3814E5E14935287FD427B3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4778E2CB5BC89F52EF7945BB /* Assets.xcassets */; };
 		A2973669F245BAE952CD86AA /* QoobymApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D4615F3B56407C46B03F0 /* QoobymApp.swift */; };
-		DAC109583BF961BBEF57A084 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800EFE397F496E8066B2AD3 /* ContentView.swift */; };
+		EA8CAF2A2DD0EAD800F4899B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CAF292DD0EAD700F4899B /* PersistenceController.swift */; };
+		EA8CAF2C2DD1026900F4899B /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CAF2B2DD1026900F4899B /* BookDetailView.swift */; };
+		EAFD78692DCFD1C80090D70D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD78682DCFD1C80090D70D /* MainView.swift */; };
+		EAFD78712DD0DCAB0090D70D /* BookStorageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAFD786F2DD0DCAB0090D70D /* BookStorageModel.xcdatamodeld */; };
+		EAFD78752DD0E3860090D70D /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD78742DD0E3860090D70D /* AddBookView.swift */; };
+		EAFD78772DD0E40A0090D70D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD78762DD0E4090090D70D /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		270D4615F3B56407C46B03F0 /* QoobymApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QoobymApp.swift; sourceTree = "<group>"; };
 		4778E2CB5BC89F52EF7945BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D28FACA0266412BD63334B /* Qoobym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qoobym.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E800EFE397F496E8066B2AD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA8CAF292DD0EAD700F4899B /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		EA8CAF2B2DD1026900F4899B /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		EAFD78682DCFD1C80090D70D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EAFD78702DD0DCAB0090D70D /* BookStorageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookStorageModel.xcdatamodel; sourceTree = "<group>"; };
+		EAFD78742DD0E3860090D70D /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		EAFD78762DD0E4090090D70D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FC5F84D99217F70A7B0E85FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EA9E8F4E2E79E8ED00DAC641 /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXGroup section */
 		5D2AD184A05E68A8AEEC9C2C /* Products */ = {
@@ -32,10 +46,13 @@
 		6EA050183502A8963A09B923 /* Qoobym */ = {
 			isa = PBXGroup;
 			children = (
-				4778E2CB5BC89F52EF7945BB /* Assets.xcassets */,
-				E800EFE397F496E8066B2AD3 /* ContentView.swift */,
-				FC5F84D99217F70A7B0E85FE /* Info.plist */,
 				270D4615F3B56407C46B03F0 /* QoobymApp.swift */,
+				4778E2CB5BC89F52EF7945BB /* Assets.xcassets */,
+				FC5F84D99217F70A7B0E85FE /* Info.plist */,
+				EAFD786C2DCFD2490090D70D /* Model */,
+				EAFD786B2DCFD2290090D70D /* ViewModel */,
+				EAFD786A2DCFD2150090D70D /* View */,
+				EA9E8F4E2E79E8ED00DAC641 /* Helpers */,
 			);
 			path = Qoobym;
 			sourceTree = "<group>";
@@ -46,6 +63,33 @@
 				6EA050183502A8963A09B923 /* Qoobym */,
 				5D2AD184A05E68A8AEEC9C2C /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		EAFD786A2DCFD2150090D70D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAFD78682DCFD1C80090D70D /* MainView.swift */,
+				EAFD78742DD0E3860090D70D /* AddBookView.swift */,
+				EAFD78762DD0E4090090D70D /* ImagePicker.swift */,
+				EA8CAF2B2DD1026900F4899B /* BookDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAFD786B2DCFD2290090D70D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAFD786C2DCFD2490090D70D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAFD786F2DD0DCAB0090D70D /* BookStorageModel.xcdatamodeld */,
+				EA8CAF292DD0EAD700F4899B /* PersistenceController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,7 +120,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1630;
 			};
 			buildConfigurationList = EA9D200136967DA82FADEBAE /* Build configuration list for PBXProject "Qoobym" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -112,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC109583BF961BBEF57A084 /* ContentView.swift in Sources */,
 				A2973669F245BAE952CD86AA /* QoobymApp.swift in Sources */,
+				EAFD78712DD0DCAB0090D70D /* BookStorageModel.xcdatamodeld in Sources */,
+				EAFD78772DD0E40A0090D70D /* ImagePicker.swift in Sources */,
+				EA8CAF2A2DD0EAD800F4899B /* PersistenceController.swift in Sources */,
+				EAFD78692DCFD1C80090D70D /* MainView.swift in Sources */,
+				EAFD78752DD0E3860090D70D /* AddBookView.swift in Sources */,
+				EA8CAF2C2DD1026900F4899B /* BookDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +244,7 @@
 				DEVELOPMENT_TEAM = PFP266U7G7;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -255,6 +305,7 @@
 				DEVELOPMENT_TEAM = PFP266U7G7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -305,6 +356,19 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EAFD786F2DD0DCAB0090D70D /* BookStorageModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EAFD78702DD0DCAB0090D70D /* BookStorageModel.xcdatamodel */,
+			);
+			currentVersion = EAFD78702DD0DCAB0090D70D /* BookStorageModel.xcdatamodel */;
+			path = BookStorageModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4160B6466947A38A17CC65B7 /* Project object */;
 }

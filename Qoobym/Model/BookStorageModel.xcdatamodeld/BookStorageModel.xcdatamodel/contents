@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788" systemVersion="24E263" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="BookStorageModel" representedClassName="BookStorageModel" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="cover" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="descriptionBook" optional="YES" attributeType="String"/>
+        <attribute name="quote" optional="YES" attributeType="String"/>
+        <attribute name="quoteListData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" customClassName="[String]"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+</model>
